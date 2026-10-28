@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management - CRUD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Product Management</h1>
+
+        <form id="productForm">
+            <div class="form-group">
+                <label for="name">Name : </label>
+                <input type="text" id="name" placeholder="Enter product name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="price">Price : </label>
+                <input type="number" id="price" placeholder="Enter price"
+                       min="0" step="any" required>
+            </div>
+
+            <div class="form-buttons">
+                <button type="submit" id="submitBtn">Submit</button>
+                <button type="button" id="cancelBtn" class="cancel-btn" hidden>
+                    Cancel
+                </button>
+            </div>
+        </form>
+
+        <p id="message" role="status"></p>
+
+        <h2>Product List</h2>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="productTable">
+                    <tr>
+                        <td colspan="4">Loading products...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
